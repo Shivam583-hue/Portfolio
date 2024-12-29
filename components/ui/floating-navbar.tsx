@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -19,17 +19,17 @@ export const FloatingNav = ({
     <motion.div
       initial={{
         opacity: 1,
-        y: 0, // Start in the visible position
+        y: 0,
       }}
       animate={{
-        y: 0, // Stay in the same position
-        opacity: 1, // Fully visible
+        y: 0,
+        opacity: 1,
       }}
       transition={{
-        duration: 0.2, // Smooth animation (optional, can be removed)
+        duration: 0.2,
       }}
       className={cn(
-        "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
+        "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-white/20 rounded-full bg-black/40 backdrop-blur-md shadow-[0px_8px_16px_-6px_rgba(0,0,0,0.2),0px_0px_16px_-2px_rgba(0,0,0,0.1)] z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4",
         className
       )}
     >
@@ -38,16 +38,18 @@ export const FloatingNav = ({
           key={`link=${idx}`}
           href={navItem.link}
           className={cn(
-            "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+            "relative text-white items-center flex space-x-1 hover:text-white/80 transition-colors font-medium"
           )}
         >
           <span className="hidden sm:block text-sm">{navItem.name}</span>
         </Link>
       ))}
-      <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-        <span>Resume</span>
-        <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+      <button className="border text-sm font-medium relative border-white/30 text-white px-4 py-2 rounded-full bg-white/10 hover:bg-white/15 transition-all hover:border-white/50 hover:shadow-[0px_0px_16px_rgba(255,255,255,0.1)]">
+        <span>CLI</span>
+        <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-violet-400 to-transparent h-px" />
       </button>
     </motion.div>
   );
 };
+
+export default FloatingNav;
