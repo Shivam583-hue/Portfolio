@@ -1,5 +1,6 @@
 "use client"
 
+import { GithubIcon, LinkIcon } from "@/app/EntireStack/Icons"
 import React from "react"
 
 const Projects = () => {
@@ -16,7 +17,7 @@ const Projects = () => {
         </h1>
       </div>
       <div>
-        <Component />
+        <Component Cover={<img src="/image.png" className="w-auto rounded-t-2xl h-80" />} />
       </div>
     </div>
   )
@@ -30,10 +31,15 @@ const Component = ({ Cover, Title, Description, LiveLink, GithubLink }: {
   GithubLink?: string,
 }) => {
   return (
-    <div>
+    <div className="h-[80vh] rounded-2xl w-max bg-gray-500">
       <div>
         {Cover}
       </div>
+      <div className="flex gap-2">
+        <GithubIcon />
+        <LinkIcon />
+      </div>
+
     </div>
   )
 }
