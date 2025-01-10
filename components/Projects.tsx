@@ -34,6 +34,10 @@ const Component = ({ Cover, Title, Description, LiveLink, GithubLink }: {
     <div className="h-[80vh] rounded-2xl w-max bg-gray-500">
       <div>
         {Cover}
+        {Title}
+        {Description}
+        {LiveLink}
+        {GithubLink}
       </div>
       <div className="flex gap-2">
         <GithubIcon />

@@ -190,8 +190,6 @@ export const KubernetesIcon = () => (
         wordSpacing: "normal",
         textTransform: "none",
         direction: "ltr",
-        blockProgression: "tb",
-        writingMode: "lr-tb",
         textAnchor: "start",
         baselineShift: "baseline",
         color: "#000",
@@ -206,7 +204,6 @@ export const KubernetesIcon = () => (
         visibility: "visible",
         display: "inline",
         overflow: "visible",
-        enableBackground: "accumulate",
         fontFamily: "Sans",
       }}
       transform="translate(-6 -175)"

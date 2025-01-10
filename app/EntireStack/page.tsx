@@ -8,7 +8,9 @@ import Arch from "@/arch.svg"
 const page = () => {
   return (
     <div className="w-screen h-[420vh] md:h-[220vh] lg:h-[200vh] bg-black">
-      <BackgroundLines children={<Stack />} />
+      <BackgroundLines>
+        <Stack />
+      </BackgroundLines>
     </div>
   )
 }

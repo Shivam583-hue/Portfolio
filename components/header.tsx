@@ -24,7 +24,7 @@ const HeroHeader = () => {
         </div>
 
         <p className="text-gray-900 text-md max-w-2xl mx-auto font-mono">
-          Hi, I'm Shivam, I create solutions across all layers of software engineering.
+          Hi, I&apos;m Shivam, I create solutions across all layers of software engineering.
         </p>
 
         <div className="flex items-center justify-center gap-4 pt-4">
