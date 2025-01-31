@@ -1,4 +1,5 @@
 import HeroHeader from "@/components/header";
+import InProgressBanner from "@/components/In-progress";
 //import Projects from "@/components/Projects";
 import TechStack from "@/components/techStack";
 import { FloatingNav } from "@/components/ui/floating-navbar";
@@ -12,6 +13,7 @@ export default function Home() {
 
   return (
     <>
+      <InProgressBanner />
       <FloatingNav className="string" navItems={navItems} />
       <HeroHeader />
       <TechStack />
